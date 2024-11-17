@@ -6,7 +6,7 @@
 /*   By: aychikhi <aychikhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 12:08:32 by aychikhi          #+#    #+#             */
-/*   Updated: 2024/11/16 16:20:20 by aychikhi         ###   ########.fr       */
+/*   Updated: 2024/11/17 17:28:48 by aychikhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ int	ft_putptr(unsigned long n)
 	i = 0;
 	if (n >= 16)
 		i += ft_putptr(n / 16);
-    i += ft_putchar((hex[n % 16]));
+	i += ft_putchar((hex[n % 16]));
 	return (i);
 }
