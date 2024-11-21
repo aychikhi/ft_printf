@@ -6,7 +6,7 @@
 /*   By: aychikhi <aychikhi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 11:46:10 by aychikhi          #+#    #+#             */
-/*   Updated: 2024/11/18 11:13:53 by aychikhi         ###   ########.fr       */
+/*   Updated: 2024/11/21 12:38:00 by aychikhi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,12 +48,12 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && *(format + 1))
 		{
 			format++;
 			i += fun(*format, args, a, i);
 		}
-		else
+		else if (*format != '%')
 			i += write(1, format, 1);
 		format++;
 	}
